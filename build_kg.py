@@ -58,11 +58,11 @@ class GoodsKg:
     '''构建图谱'''
     def create_graph(self):
         concept_brand, concept_goods, rels_goods, rels_brand = self.read_data()
-        # print('creating nodes....')
-        # self.create_node('Product', concept_goods)
-        # self.create_node('Brand', concept_brand)
-        # print('creating edges....')
-        # self.create_edges(rels_goods, 'Product', 'Product')
+        print('creating nodes....')
+        self.create_node('Product', concept_goods)
+        self.create_node('Brand', concept_brand)
+        print('creating edges....')
+        self.create_edges(rels_goods, 'Product', 'Product')
         self.create_edges(rels_brand, 'Brand', 'Product')
         return
 
