@@ -11,6 +11,8 @@ import gzip
 import chardet
 import json
 import pymongo
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class GoodSchema:
     def __init__(self):
